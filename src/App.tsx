@@ -5,6 +5,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Study from './pages/Study';
+import NotreDemarche from './pages/NotreDemarche';
 import { Resources } from './pages/StaticPages';
 import { AnimatePresence, motion, useScroll, useSpring } from 'framer-motion';
 
@@ -31,6 +32,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/etude" element={<Study />} />
               <Route path="/about" element={<About />} />
+              <Route path="/demarches" element={<NotreDemarche />} />
               <Route path="/resources" element={<Resources />} />
             </Routes>
           </AnimatePresence>

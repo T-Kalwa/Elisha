@@ -19,6 +19,7 @@ const Navbar = () => {
   const navLinks = [
     { title: 'Accueil', path: '/', icon: <Info size={18} /> },
     { title: 'À Propos', path: '/about', icon: <Users size={18} /> },
+    { title: 'Démarches', path: '/demarches', icon: <FileText size={18} /> },
     { title: 'Études', path: '/etude', icon: <FileText size={18} /> },
     { title: 'Ressources', path: '/resources', icon: <Book size={18} /> },
   ];

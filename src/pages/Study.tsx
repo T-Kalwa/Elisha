@@ -11,7 +11,7 @@ import hysterieImg from '../assets/hysterie.jpeg';
 import inconscienceImg from '../assets/inconscience.jpeg';
 
 const JournalSheet = ({ title, subtitle, children }: any) => (
-    <div className="max-w-[1400px] mx-auto px-6 py-12">
+    <div className="max-w-[1600px] mx-auto px-6 py-12">
         <div className="bg-[#0c0d0e] border border-white/10 rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden shadow-2xl">
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
             <div className="relative z-10">
@@ -62,8 +62,7 @@ const Study = () => {
         { id: 'sociaux', num: '02', title: 'Sociaux', desc: 'Analyse sociologique et construction du stigmate', icon: <Users size={20} /> },
         { id: 'psycho', num: '03', title: 'Psycho', desc: 'Impacts psychologiques et réalités individuelles', icon: <Brain size={20} /> },
         { id: 'glossaire', num: '04', title: 'Glossaire', desc: 'Lexique et concepts fondamentaux', icon: <List size={20} /> },
-        { id: 'ressources', num: '05', title: 'Ressources', desc: 'Organismes et outils de sensibilisation', icon: <Shield size={20} /> },
-        { id: 'references', num: '06', title: 'Références', desc: 'Sources académiques et bibliographie', icon: <BookOpen size={20} /> }
+        { id: 'ressources', num: '05', title: 'Ressources & Sources', desc: 'Aide, bibliographie et autres outils', icon: <Shield size={20} /> }
     ];
 
     return (
@@ -135,8 +134,8 @@ const Study = () => {
                                             window.scrollTo({ top: 0, behavior: 'smooth' });
                                         }}
                                         className={`group relative flex items-center justify-center w-12 h-12 rounded-full transition-all duration-500 border shadow-xl ${activeChapter === ch.id
-                                                ? 'bg-red-600 border-red-500 scale-110'
-                                                : 'bg-zinc-900 border-white/5 hover:border-zinc-500'
+                                            ? 'bg-red-600 border-red-500 scale-110'
+                                            : 'bg-zinc-900 border-white/5 hover:border-zinc-500'
                                             }`}
                                     >
                                         <div className={`${activeChapter === ch.id ? 'text-white' : 'text-zinc-600 group-hover:text-zinc-300'} transition-colors`}>
@@ -243,7 +242,7 @@ const Study = () => {
                                         <div className="md:col-span-4 border-l-2 border-white/5 pl-12 space-y-16">
                                             <div className="space-y-8 text-justify">
                                                 <h3 className="text-4xl font-black uppercase text-red-600 tracking-tighter border-b-2 border-red-600 pb-4 italic font-serif">Féminisme</h3>
-                                                
+
                                                 <div className="relative group overflow-hidden rounded-2xl border border-white/10 mb-8">
                                                     <img src={fem1} alt="Mouvement Féministe" className="w-full aspect-video object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000" />
                                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
@@ -252,7 +251,7 @@ const Study = () => {
                                                 <p className="text-zinc-400 text-xl leading-relaxed italic">
                                                     Plusieurs groupes féministes ont joué un rôle crucial pour défendre la perception de la prostitution dans la société. Ils dénoncent les conditions de vie complexes des femmes qui se prostituent ainsi que les conditions « <GlossaryLink termId="parias" label="parias" onSelect={setActiveChapter} /> ».
                                                 </p>
-                                                
+
                                                 <p className="text-zinc-500 text-lg leading-relaxed">
                                                     Ces organismes affirment que les femmes vivent soumises à l'autorité policière et qu'ils luttent pour un changement du pouvoir des hommes sur les femmes. Les féministes mettent en évidence que ces travailleuses sont dans un système prostitutionnel en tant que victimes et veulent combattre l'injustice de l'inégalité entre les genres.
                                                 </p>
@@ -278,8 +277,8 @@ const Study = () => {
                                                     <span className="text-zinc-700 text-[10px] font-black uppercase tracking-widest pl-8 block">— Ann Taylor Allen, Historienne (p.20)</span>
                                                     <p className="text-zinc-500 text-sm italic leading-relaxed pl-8">
                                                         La citation explique que malgré le pouvoir des normes, elles peuvent influencer et remettre en question celle-ci d’une certaine façon.
-                                                     </p>
-                                                 </div>
+                                                    </p>
+                                                </div>
 
                                                 <p className="text-zinc-500 text-lg leading-relaxed border-t border-white/5 pt-8">
                                                     De plus, au Canada la prostitution a toujours été tolérée mais à la fois cachée et moralement condamnée. Les féministes cherchent à démontrer que l’application des lois sur la prostitution sont sexistes ainsi qu’il contrôle la sexualité des femmes. Dans ce cas, elles veulent prouver que ces lois sont en vigueur majoritairement pour les femmes.
@@ -288,7 +287,7 @@ const Study = () => {
                                                 <div className="pt-8 space-y-8 bg-red-600/5 p-8 rounded-3xl border border-red-600/10 text-justify">
                                                     <h4 className="text-white font-black uppercase tracking-widest text-xs mb-4">Archives Statistique Canada [4]</h4>
                                                     <p className="text-zinc-400 text-sm leading-relaxed mb-6">Cependant, dans les archives de Statistique Canada ont montrent que les femmes sont plus criminalisées que les hommes. Dans le rapport entre 2008 à 2009 et 2013 à 2014, 31% des causes liées à la prostitution et réglées en tribunaux ce sont des femmes involucrées.</p>
-                                                    
+
                                                     <div className="space-y-6 border-t border-red-600/10 pt-6">
                                                         {[
                                                             { val: '55%', label: 'Se déclarent coupables' },
@@ -354,8 +353,8 @@ const Study = () => {
                         {activeChapter === 'sociaux' && (
                             <JournalSheet title="Sociaux" subtitle="La Construction du Stigmate">
                                 <div className="font-serif text-zinc-300 leading-relaxed text-lg flex flex-col gap-24">
-                                    <div className="grid md:grid-cols-12 gap-16">
-                                        <div className="md:col-span-8 space-y-24">
+                                    <div className="grid md:grid-cols-12 gap-12">
+                                        <div className="md:col-span-12 space-y-24">
                                             {/* SECTION 1: CONSTRUCTION SOCIALE */}
                                             <div className="relative pt-32">
                                                 <span className="text-[24rem] text-red-600 font-black absolute -top-20 -left-20 opacity-10 leading-none pointer-events-none">C</span>
@@ -364,6 +363,7 @@ const Study = () => {
                                                         <h2 className="text-sm font-black uppercase tracking-[0.5em] text-red-600">Partie I</h2>
                                                         <h3 className="text-6xl font-black text-white italic uppercase tracking-tighter">La Construction <br />Sociale</h3>
                                                     </div>
+
 
                                                     <p className="text-3xl font-light italic text-zinc-200 leading-snug text-justify">
                                                         Comme nous le savons, le travail du sexe n’est pas bien perçu encore aujourd’hui dans la société occidentale. En soit la <GlossaryLink termId="stigmatisation" label="stigmatisation" onSelect={setActiveChapter} /> elle-même ne vient pas des individus mais de la manière que la société perçoit la prostitution.
@@ -397,16 +397,16 @@ const Study = () => {
                                                     <h3 className="text-6xl font-black text-white italic uppercase tracking-tighter">Étiquetage et <br />Déviance</h3>
                                                 </div>
 
-                                                <div className="columns-1 md:columns-2 gap-12 text-zinc-400 text-lg leading-relaxed text-justify space-y-8 text-justify">
+                                                <div className="space-y-12 text-zinc-400 text-lg leading-relaxed text-justify">
                                                     <p>Howard Saul Becker affirme que la réalité de nos comportements sont construits par nos interactions majoritairement influencées par les normes. Lorsqu’un individu va à l’encontre de ces normes, la société peut le traiter comme « étranger ».</p>
-                                                    
+
                                                     <div className="break-inside-avoid p-10 border-l-4 border-red-600 bg-white/5 italic shadow-2xl rounded-sm my-8">
                                                         <p className="text-xl text-zinc-300 leading-relaxed font-serif">« Dès lors qu’une personne est étiquetée, il semble qu’elle soit enfermée en un cercle infernal ne connaissant aucune issue »</p>
                                                         <span className="text-[10px] font-sans font-black uppercase tracking-widest mt-6 block opacity-50">— Shlomo Shoham (1970-1991)</span>
                                                     </div>
 
                                                     <p>C’est la théorie de l’étiquetage : ce n'est pas l'action qui fait un déviant, mais l'étiquette qu'on lui colle. Le déviant est un « étranger moral ». Becker énonce la « Carrière déviante » : de la déviance primaire (sans conséquences majeures) à la déviance secondaire (rejet, sanctions).</p>
-                                                    
+
                                                     <div className="break-inside-avoid bg-white p-12 shadow-2xl rotate-1 rounded-sm text-black text-center my-12">
                                                         <p className="text-2xl font-black italic leading-tight uppercase tracking-tighter mb-4">
                                                             « J’ai l’impression d’être une espèce de prostituée, tout le monde veut savoir ce que je fais à chaque instant... »
@@ -415,73 +415,123 @@ const Study = () => {
                                                     </div>
 
                                                     <p>La religion a fait en sorte que la prostitution soit perçue comme un regard déviant. Comme l’illustre Einstein, le regard de la société peut influencer la construction de l’identité d’un individu quotidiennement.</p>
+                                                    
+                                                    <div className="p-10 border border-white/10 rounded-[2rem] bg-gradient-to-br from-white/5 to-transparent flex flex-col md:flex-row items-center gap-8 my-12">
+                                                        <div className="shrink-0 text-red-600">
+                                                            <Users size={48} strokeWidth={1} />
+                                                        </div>
+                                                        <div>
+                                                            <h4 className="text-white font-black uppercase tracking-widest text-sm mb-2">Analyse de Paire</h4>
+                                                            <p className="text-zinc-500 italic mb-4">La stigmatisation ne reste pas seulement au niveau des idées, elle influence concrètement la perception par les pairs.</p>
+                                                            <p className="text-white font-serif text-xl">« Cette vision crée des divisions entre les femmes elles-mêmes, opposant les "respectables" aux "déviantes". »</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-
                                             {/* SECTION 3: IMPACTS SUR LES CONDITIONS DE VIE */}
                                             <div className="pt-32 border-t border-white/5 space-y-16 pb-24">
                                                 <div className="flex flex-col md:flex-row gap-12 items-start">
                                                     <div className="w-24 h-[1px] bg-red-600 mt-6 shrink-0" />
                                                     <div className="space-y-6">
-                                                        <h2 className="text-sm font-black uppercase tracking-[0.5em] text-red-600">Impacts Humains</h2>
+                                                        <h2 className="text-sm font-black uppercase tracking-[0.5em] text-red-600">Partie III</h2>
                                                         <h3 className="text-5xl font-black text-white uppercase tracking-tighter leading-none">Conditions de vie</h3>
                                                     </div>
                                                 </div>
 
-                                                <div className="grid md:grid-cols-2 gap-16 text-zinc-400 text-lg leading-relaxed text-justify">
-                                                    <div className="space-y-12">
-                                                        <p className="text-2xl text-zinc-300 font-light italic border-l-2 border-red-600/30 pl-8">
-                                                            L’exclusion sociale a des répercussions directes sur la : santé physique et mentale, l’accessibilité au logement, et l’emploi.
-                                                        </p>
-                                                        <p>
-                                                            Psychologiquement, l’exposition constante aux jugements péjoratifs affecte l’estime de soi. L’intériorisation de ces perceptions engendre la honte et la dévalorisation personnelle.
-                                                        </p>
-                                                        <div className="p-10 bg-red-600/5 rounded-[2rem] border border-red-600/10 flex gap-8 items-start">
-                                                            <Brain className="text-red-600 shrink-0" size={32} />
-                                                            <p className="text-zinc-300 italic text-lg">
-                                                                « Malheureusement ce sont souvent des personnes isolées socialement... c'est compliqué d'extérioriser les réalités de leur travail. »
+                                                    <div className="grid md:grid-cols-2 gap-16 text-zinc-400 text-lg leading-relaxed text-justify">
+                                                        <div className="space-y-12">
+                                                            <p className="text-2xl text-zinc-300 font-light italic border-l-2 border-red-600/30 pl-8">
+                                                                L’exclusion sociale a des répercussions directes sur la : santé physique et mentale, l’accessibilité au logement, et l’emploi.
                                                             </p>
+                                                            <p>
+                                                                Psychologiquement, l’exposition constante aux jugements péjoratifs affecte l’estime de soi. L’intériorisation de ces perceptions engendre la honte et la dévalorisation personnelle.
+                                                            </p>
+                                                            <div className="p-10 bg-red-600/5 rounded-[2rem] border border-red-600/10 flex gap-8 items-start">
+                                                                <Brain className="text-red-600 shrink-0" size={32} />
+                                                                <p className="text-zinc-300 italic text-lg">
+                                                                    « Malheureusement ce sont souvent des personnes isolées socialement... c'est compliqué d'extérioriser les réalités de leur travail. »
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div className="space-y-8">
+                                                            <p>
+                                                                La pression sociale contribue au développement de l’anxiété, du stress ou de la dépression. La peur d’être reconnu force à vivre dans l’isolement, ce qui limite le réseau de soutien vital.
+                                                            </p>
+                                                            <p>
+                                                                Cette <GlossaryLink termId="stigmatisation" label="stigmatisation" onSelect={setActiveChapter} /> freine la recherche d’aide par crainte d’être mal compris. L’exclusion renforce une précarité déjà extrêmement complexe.
+                                                            </p>
+                                                            <div className="pt-12 border-t border-zinc-800">
+                                                                <p className="text-white font-black uppercase tracking-widest text-xs mb-4">Conclusion Sociologique</p>
+                                                                <p className="text-zinc-500 italic">
+                                                                    Le déviant est celui à qui l’étiquette a été appliquée avec succès. L'image de la prostitution reste visualisée par rapport aux normes dominantes.
+                                                                </p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div className="space-y-8">
-                                                        <p>
-                                                            La pression sociale contribue au développement de l’anxiété, du stress ou de la dépression. La peur d’être reconnu force à vivre dans l’isolement, ce qui limite le réseau de soutien vital.
+                                                </div>
+
+                                            {/* SECTION 4: SOCIALISATION & INSTITUTIONS */}
+                                            <div className="pt-32 border-t border-white/5 space-y-16 pb-24">
+                                                <div className="space-y-4">
+                                                    <h2 className="text-sm font-black uppercase tracking-[0.5em] text-red-600">Partie IV</h2>
+                                                    <h3 className="text-5xl font-black text-white italic uppercase tracking-tighter">Le Rôle des Institutions <br /> et du Système</h3>
+                                                </div>
+                                                
+                                                <div className="space-y-12 text-zinc-400 text-lg leading-relaxed text-justify">
+                                                    <p>Pour commencer, le processus de socialisation est primordial afin de comprendre l’incorporation des façons d’interagir, de penser et d’anticiper le monde. Dès l’enfance, l’humain est exposé à des agents de socialisation primaire, se définissant comme la famille, l’école et les amis. Chacun apporte un impact sur la transmission de la culture, la construction de l’identité sociale, l’approbation des rôles sociaux et l’acquisition du sens des responsabilités.</p>
+                                                    <p>Le concept fondamental en sociologie qui explique l’ensemble d’éléments d’apprentissage, de transmission et de production qui caractérisent la société se désigne comme la culture. La culture englobe un ensemble de concepts tels que les normes, les valeurs, les croyances, les symboles et les institutions. Ces éléments apportent une nécessité afin de comprendre la société ainsi qu’à l’adaptation des comportements conformes de chacun par rapport aux normes. [1]</p>
+                                                    
+                                                    <div className="break-inside-avoid p-10 bg-white shadow-2xl rounded-sm transform rotate-1 hover:rotate-0 transition-transform duration-500 text-black">
+                                                        <p className="text-xl font-black italic uppercase leading-tight tracking-tighter text-center">
+                                                            “La socialisation définit la compréhension des normes à respecter à travers des institutions.”
                                                         </p>
-                                                        <p>
-                                                            Cette <GlossaryLink termId="stigmatisation" label="stigmatisation" onSelect={setActiveChapter} /> freine la recherche d’aide par crainte d’être mal compris. L’exclusion renforce une précarité déjà extrêmement complexe.
+                                                    </div>
+
+                                                    <p>En réalité, la socialisation est un processus qui incite les individus à agir, à penser et à prévoir le monde qui les entoure Elle se fait de manière progressive par les interactions sociales quotidiennes puisqu’elle mène à adopter des comportements « normaux » dans leur société. Ces comportements sont construits socialement par les normes qui encadrent la société.</p>
+                                                    <p>Dans ce contexte, l’institution joue un rôle central dans la structure sociale, tel que dans l’organisation et la régularité des comportements basés sur les valeurs et les normes. Entre autres, les agents de socialisation primaires et même l’État incorporent les règles et les attentes sociales aux individus. </p>
+                                                    <p>Il est vrai que les institutions encadrent les comportements, mais également qu'elles influencent la façon dont les individus perçoivent la réalité de la société. Puisqu’ils sont encadrés par des normes et des savoirs, les individus peuvent se trouver dans une situation d’incertitude sur ces normes. [2]</p>
+                                                    <p>Dans le cadre de la prostitution, on note que ces normes peuvent influencer énormément la perception des humains. Par exemple, dans la socialisation des rôles des genres entre les hommes et les femmes, ils transmettent des attentes différentes, ce qui explique l’étiquette de la stigmatisation qui est présentée aux femmes. Les médias et le système juridique alimentent également ces perceptions en caractérisant la déviance et la normalité.</p>
+                                                </div>
+                                            </div>
+
+                                            {/* SECTION 5: STRATÉGIES D'ADAPTATION */}
+                                            <div className="pt-32 border-t border-white/5 space-y-16 pb-24">
+                                                <div className="space-y-4">
+                                                    <h2 className="text-sm font-black uppercase tracking-[0.5em] text-red-600">Partie V</h2>
+                                                    <h3 className="text-5xl font-black text-white italic uppercase tracking-tighter">Stratégies <br /> d'Adaptation</h3>
+                                                </div>
+                                                
+                                                <div className="space-y-12 text-zinc-400 text-lg leading-relaxed text-justify">
+                                                    <p>Les stratégies d’adaptations ici sont les moyens qu'on trouve pour faire face à des situations qui peuvent être anxieuses ou stressantes. Il arrive qu’en ce qui concerne les différentes réalités et difficultés du milieu de la prostitution, des personnes développent des stratégies d’adaptation afin de mieux gérer leur quotidien. Cela leur permet de se protéger, physiquement et psychologiquement, de la <GlossaryLink termId="stigmatisation" label="stigmatisation" onSelect={setActiveChapter} /> et des risques associés à leur travail.</p>
+                                                    
+                                                    <p>D’une part, certaines mettent en place des stratégies de protection par l’utilisation de la discrétion. On peut voir l’usage de pseudonymes pour cacher son identité véritable, le fait de ne pas dire à sa famille et à son entourage qu’on exerce ce métier afin d’éviter les jugements, mais aussi des stratégies permettant de séparer le personnel du professionnel, ce qui leur permet partiellement de gérer leur image sociale.</p>
+                                                    
+                                                    <div className="break-inside-avoid p-10 bg-white/5 shadow-2xl rounded-sm border-l-2 border-red-600 my-8">
+                                                        <p className="text-xl font-light italic leading-tight text-zinc-200 text-center">
+                                                            “On peut aussi voir l’importance de la création de groupes de soutien... de manière à briser un certain isolement créé par un stigmate.”
                                                         </p>
-                                                        <div className="pt-12 border-t border-zinc-800">
-                                                            <p className="text-white font-black uppercase tracking-widest text-xs mb-4">Conclusion Sociologique</p>
-                                                            <p className="text-zinc-500 italic">
-                                                                Le déviant est celui à qui l’étiquette a été appliquée avec succès. L'image de la prostitution reste visualisée par rapport aux normes dominantes.
-                                                            </p>
-                                                        </div>
+                                                    </div>
+
+                                                    <p>En effet, plusieurs de ces personnes se rapprochent d’autres individus dans une situation similaire, dans le but de partager des conseils concernant les clients à risque, des méthodes pour garantir leur sécurité, et un soutien psychologique vital.</p>
+                                                    
+                                                    <p>En parallèle, ces différentes stratégies mènent certaines personnes à faire appel à des ressources ou des organismes. Elles peuvent se tourner vers des groupes communautaires qui offrent diverses ressources, telles que l’aide à la santé, le soutien psychologique ou l’accompagnement devant les tribunaux. Ces cadres comptent souvent pour ces femmes, car ils leur permettent de bénéficier d’un espace sécure où le jugement n’est pas affecté à leur bien-être.</p>
+                                                    
+                                                    <p>Enfin, des stratégies de sécurité sont également mises en place pour diminuer les risques. Par exemple, certains individus font le choix de filtrer leurs clients, de sélectionner des lieux qu’elles jugent plus sûrs ou d’informer une personne de confiance de leur situation. Ces actions ont pour but de diminuer les risques liés à leur travail puisque ces stratégies apportent d’une part que les travailleurs du sexe ne subissent pas passivement leur situation, mais qu’elles se rendent justices aux réalités difficiles qu’elles subissent. Ainsi que d’une autre part, que leur mode de vie est marqué par la stigmatisation sociale, qui les pousse à développer différents moyens de se protéger.</p>
+                                                </div>
+                                            </div>
+
+                                                <div className="mt-24 pt-12 border-t border-white/10 grid md:grid-cols-2 gap-12 text-[10px] font-black uppercase tracking-widest text-zinc-600 italic">
+                                                    <div className="space-y-4">
+                                                        <p>[1] Joly-Giguère, Intro à la sociologie, HIVER 2025</p>
+                                                        <p>[2] Collège de France, La socialisation & comportements</p>
+                                                    </div>
+                                                    <div className="space-y-4 md:text-right">
+                                                        <p>[3] André Turmel, Département de sociologie, ULaval</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        {/* SIDEBAR ANALYSIS */}
-                                        <div className="md:col-span-4 border-l-2 border-white/5 pl-12">
-                                            <div className="sticky top-12 space-y-16">
-                                                <div className="space-y-8">
-                                                    <h3 className="text-3xl font-black uppercase text-red-600 tracking-tighter border-b-2 border-red-600 pb-4 italic font-serif">Analyse de Paire</h3>
-                                                    <div className="space-y-6 text-zinc-500 italic text-lg text-justify">
-                                                        <p>La stigmatisation ne reste pas seulement au niveau des idées, elle influence concrètement la perception par les pairs.</p>
-                                                        <div className="p-8 bg-white/5 rounded-3xl border border-white/10 text-zinc-400">
-                                                            « Cette vision crée des divisions entre les femmes elles-mêmes, opposant les "respectables" aux "déviantes". »
-                                                        </div>
-                                                    </div>
-                                                </div>
 
-                                                <div className="pt-24 opacity-20 group hover:opacity-100 transition-opacity">
-                                                    <ShieldCheck size={120} className="text-zinc-500 mb-8" strokeWidth={1} />
-                                                    <div className="text-[10px] font-black tracking-[0.3em] uppercase leading-loose text-zinc-500">
-                                                        Sociological Archive<br />Series 2026<br />Project Elisha
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </JournalSheet>
@@ -829,7 +879,7 @@ const Study = () => {
                         )}
 
                         {activeChapter === 'ressources' && (
-                            <JournalSheet title="Ressources" subtitle="Aide & Sensibilisation">
+                            <JournalSheet title="Ressources & Sources" subtitle="Aide, Bibliographie & Sensibilisation">
                                 <div className="font-serif text-zinc-300 leading-relaxed text-lg flex flex-col gap-24">
                                     <div className="grid md:grid-cols-12 gap-16">
                                         <div className="md:col-span-8 space-y-24">
@@ -839,7 +889,7 @@ const Study = () => {
                                                     <Heart className="text-red-600" size={40} />
                                                     <h3 className="text-5xl font-black text-white italic uppercase tracking-tighter">Organismes de Soutien</h3>
                                                 </div>
-                                                
+
                                                 <div className="grid gap-8">
                                                     {[
                                                         {
@@ -872,7 +922,71 @@ const Study = () => {
                                                 </div>
                                             </div>
 
-                                            {/* Section 2: Médiathèque */}
+                                            {/* Section 2: Sources & Bibliographie */}
+                                            <div className="pt-24 border-t border-white/5 space-y-16">
+                                                <div className="flex items-center gap-6">
+                                                    <BookOpen className="text-red-600" size={40} />
+                                                    <h3 className="text-5xl font-black text-white italic uppercase tracking-tighter">Sources <span className="text-red-500">&</span> Bibliographie</h3>
+                                                </div>
+                                                <div className="grid xl:grid-cols-2 2xl:grid-cols-3 gap-16">
+                                                    {/* SECTION PSYCHO */}
+                                                    <div className="space-y-12">
+                                                        <div className="relative">
+                                                            <span className="text-8xl font-black text-white/5 absolute -top-8 -left-4">P</span>
+                                                            <h3 className="text-4xl font-black text-white italic uppercase tracking-tighter border-b-2 border-red-600 pb-4 relative z-10">Psycho Elisha</h3>
+                                                        </div>
+                                                        <div className="space-y-4 text-xs text-zinc-400 font-sans tracking-wide leading-relaxed">
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">1.</span><a href="https://archipel.uqam.ca/16950/1/D4437.pdf" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://archipel.uqam.ca/16950/1/D4437.pdf</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">2.</span><a href="https://www.revmed.ch/revue-medicale-suisse/2010" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://www.revmed.ch/revue-medicale-suisse/2010</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">3.</span><a href="https://frq.gouv.qc.ca/app/uploads/2021/05/pf_2016_rapport_n.lanctot.pdf" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://frq.gouv.qc.ca/app/uploads/2021/05/pf_2016_rapport_n.lanctot.pdf</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">4.</span><a href="https://mouvementdunid.org/prostitution-societe/" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://mouvementdunid.org/prostitution-societe/</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">5.</span><a href="https://www.canada.ca/content/dam/ofovc-ofvac/documents/research/fr/Coercive%20Control%20Sexual%20Exploitation%20Final%20-%20FR.pdf" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://www.canada.ca/content/dam/ofovc-ofvac/documents/research/fr/...</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">6.</span><a href="https://stm.cairn.info/revue-l-information-psychiatrique-2016-8-page-665?lang=fr" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://stm.cairn.info/revue-l-information-psychiatrique-2016-8-page-665?lang=fr</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">7.</span><span>(Nasio, 2005)</span></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">8.</span><span>(Freud, 2011)</span></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">9.</span><span>(Perron & Perron-Borelli, 2001)</span></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black flex-shrink-0">10.</span><span>Farley M. <a href="https://pubmed.ncbi.nlm.nih.gov/9698636/" target="_blank" rel="noopener" className="text-red-500 hover:text-red-400 break-words">https://pubmed.ncbi.nlm.nih.gov/9698636/</a></span></div>
+                                                        </div>
+                                                    </div>
+
+                                                    {/* SECTION SOCIO */}
+                                                    <div className="space-y-12">
+                                                        <div className="relative">
+                                                            <span className="text-8xl font-black text-white/5 absolute -top-8 -left-4">S</span>
+                                                            <h3 className="text-4xl font-black text-white italic uppercase tracking-tighter border-b-2 border-red-600 pb-4 relative z-10">Socio Rihanna</h3>
+                                                        </div>
+                                                        <div className="space-y-4 text-xs text-zinc-400 font-sans tracking-wide leading-relaxed">
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">1.</span><a href="https://www.universalis.fr/encyclopedie/interactionnisme-symbolique/" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://www.universalis.fr/encyclopedie/interactionnisme-symbolique/</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">2.</span><a href="https://www.erudit.org/fr/revues/bhp/2006-v15-n1-bhp04290/1056086ar/" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://www.erudit.org/fr/revues/bhp/2006-v15-n1-bhp04290/1056086ar/</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">3.</span><a href="https://www.quebec.ca/famille-et-soutien-aux-personnes/violences/exploitation-sexuelle/definition-exploitation-sexuelle" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://www.quebec.ca/famille-et-soutien-aux-personnes/violences/...</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">4.</span><a href="https://shs.cairn.info/sociologie-de-la-prostitution--9782707179159-page-3?lang=fr&tab=feuilleteur" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://shs.cairn.info/sociologie-de-la-prostitution--9782707179159-page-3?lang=fr&tab=feuilleteur</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">5.</span><a href="https://shs.cairn.info/revue-deviance-et-societe-2010-3-page-425?lang=fr" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://shs.cairn.info/revue-deviance-et-societe-2010-3-page-425?lang=fr</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">6.</span><a href="https://collegelasalle-lea.omnivox.ca/cvir/ddle/VisualiseDocument.aspx?C=LAS&E=P&L=FRA&Ref=20260417215746&SID=87085114-eaf0-4a34-b5c7-adb7a90c870e&Info=SXNxeTR4T1laZ3VMWFpkZUF5eGNSNVJUdUl5RTZXbGFhdUw2NHUxdTlGZ0VmMXl2WEQ0cnhZR0RNNGJLK2xiSXFMaXZQUHEvRzBiYUZCSFJITmFXOENVVG9nbVcxSXh4VFJoY0o4UWllUE1OV1VqWVZjdWtNeWFwbnUrZ1hqbk9Tb3N2NkRNRFY4UlFTTGRXSGkwbFp6RDlRaHV5UGhUQjFkT29RbEcybXhnPQ__&IDDocCoursDocument=905ea5bb-6b70-4f87-a3c6-49e759f58a8f" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://collegelasalle-lea.omnivox.ca/cvir/ddle... (Document 1)</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">7.</span><a href="https://collegelasalle-lea.omnivox.ca/cvir/ddle/VisualiseDocument.aspx?C=LAS&E=P&L=FRA&Ref=20260417215746&SID=87085114-eaf0-4a34-b5c7-adb7a90c870e&Info=bHJEZFgwL0MrMGE4Z09Ja29peXpWTFgzeThqdnZQVzNnb3gzR1hMSVhPOEg2SnNzSDJSSFhBNjNYait1d2R4V0N5cU5yeGNqMlpHOFBGQmhVVnRNVGozSDk5TXJjMEdSYllCSkNOQmpRMkFTa0tTOXVvYVp2c1pqTEhkT2p2cUNTRlNObDNFZGU3dWFiRVVIaEJ0cFo1Y21ORU9mT1JnQkRhbTRKUHRCbmw4PQ__&IDDocCoursDocument=78dd9487-e2e7-4ce9-ad5c-6047f81a7896" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://collegelasalle-lea.omnivox.ca/cvir/ddle... (Document 2)</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">8.</span><a href="https://campus-innovation-lycees.fr/wp-content/uploads/2025/08/Sociologie-Premiere-Chapitre-1-Socialisation-differences-de-comportements-entre-individus.pdf" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://campus-innovation-lycees.fr/wp-content/uploads/2025/08/...</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">9.</span><a href="https://www.erudit.org/fr/livres/culture-francaise-damerique/culture-institution-savoir/000456co.pdf" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://www.erudit.org/fr/livres/culture-francaise...</a></div>
+                                                        </div>
+                                                    </div>
+
+                                                    {/* SECTION HISTOIRE */}
+                                                    <div className="space-y-12">
+                                                        <div className="relative">
+                                                            <span className="text-8xl font-black text-white/5 absolute -top-8 -left-4">H</span>
+                                                            <h3 className="text-4xl font-black text-white italic uppercase tracking-tighter border-b-2 border-red-600 pb-4 relative z-10">Histoire</h3>
+                                                        </div>
+                                                        <div className="space-y-4 text-xs text-zinc-400 font-sans tracking-wide leading-relaxed">
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">1.</span><a href="https://thecanadianencyclopedia.ca/fr/article/prostitution" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://thecanadianencyclopedia.ca/fr/article/prostitution</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">2.</span><a href="https://crides.fondationscelles.org/mod/resource/view.php?id=18" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://crides.fondationscelles.org/mod/resource/view.php?id=18</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">3.</span><a href="https://www.worldhistory.org/trans/fr/1-19387/hetaire/" target="_blank" rel="noopener" className="hover:text-red-500 transition-colors break-words">https://www.worldhistory.org/trans/fr/1-19387/hetaire/</a></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">4.</span><span>La prostitution féminine à Montréal 1945-1970, Danielle Lacasse, Édition Boréal</span></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">5.</span><span>Prostitution et traite des femmes, Yolande Cohen, Édition Delbusso</span></div>
+                                                            <div className="flex gap-4"><span className="text-red-600 font-black">6.</span><span>Femme publiques Les féminismes à l’épreuve de la prostitution, Catherine Deschamps et Anne Souyris, Éditions Amsterdam</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Section 3: Médiathèque */}
                                             <div className="pt-24 border-t border-white/5 space-y-12">
                                                 <div className="flex items-center gap-6">
                                                     <Video className="text-red-600" size={40} />
@@ -892,6 +1006,12 @@ const Study = () => {
                                                             author: "Radio-Canada Info",
                                                             url: "https://ici.radio-canada.ca/info/videos/1-6982055/prostitution-temoignages-et-debat",
                                                             desc: "Discussion de fond sur les réalités du milieu et les enjeux de société."
+                                                        },
+                                                        {
+                                                            title: "Publications & Témoignages",
+                                                            author: "Chez Stella",
+                                                            url: "https://chezstella.org/fr/publications/",
+                                                            desc: "Vidéos, rapports et ressources documentaires créés par et pour les personnes concernées."
                                                         }
                                                     ].map((vid, i) => (
                                                         <a key={i} href={vid.url} target="_blank" rel="noopener noreferrer" className="p-8 bg-zinc-900/50 rounded-3xl border border-white/5 hover:bg-black transition-colors group">
@@ -925,95 +1045,8 @@ const Study = () => {
                                 </div>
                             </JournalSheet>
                         )}
-
-                        {activeChapter === 'references' && (
-                            <JournalSheet title="Références" subtitle="Sources & Bibliographie">
-                                <div className="font-serif text-zinc-300 leading-relaxed text-lg flex flex-col gap-24">
-                                    <div className="grid md:grid-cols-12 gap-16">
-                                        <div className="md:col-span-12 space-y-24">
-                                            {/* Sections categories */}
-                                            <div className="grid md:grid-cols-3 gap-16">
-                                                {/* SECTION PSYCHO */}
-                                                <div className="space-y-12">
-                                                    <div className="relative">
-                                                        <span className="text-8xl font-black text-white/5 absolute -top-8 -left-4">P</span>
-                                                        <h3 className="text-4xl font-black text-white italic uppercase tracking-tighter border-b-2 border-red-600 pb-4 relative z-10">Psycho</h3>
-                                                    </div>
-                                                    <div className="space-y-6 text-[10px] text-zinc-500 font-sans font-black uppercase tracking-[0.2em] leading-loose">
-                                                        <a href="https://archipel.uqam.ca/16950/1/D4437.pdf" target="_blank" rel="noopener" className="block hover:text-red-500 transition-colors">Archipel UQAM - Dissertation D4437</a>
-                                                        <a href="https://www.revmed.ch/revue-medicale-suisse/2010" target="_blank" rel="noopener" className="block hover:text-red-500 transition-colors">Revue Médicale Suisse - Sexologie</a>
-                                                        <a href="https://frq.gouv.qc.ca/app/uploads/2021/05/pf_2016_rapport_n.lanctot.pdf" target="_blank" rel="noopener" className="block hover:text-red-500 transition-colors">FRQ Rapport N. Lanctôt</a>
-                                                        <a href="https://mouvementdunid.org/prostitution-societe/" target="_blank" rel="noopener" className="block hover:text-red-500 transition-colors">Mouvement du Nid - Santé Mentale</a>
-                                                        <a href="https://www.canada.ca/content/dam/ofovc-ofvac/documents/research/fr/Coercive%20Control%20Sexual%20Exploitation%20Final%20-%20FR.pdf" target="_blank" rel="noopener" className="block hover:text-red-500 transition-colors">Canada.ca - Coercive Control</a>
-                                                        <a href="https://pubmed.ncbi.nlm.nih.gov/9698636/" target="_blank" rel="noopener" className="block hover:text-red-500 transition-colors underline decoration-red-600 underline-offset-4">Farley M, Barkan H (PubMed 9698636)</a>
-                                                    </div>
-                                                </div>
-
-                                                {/* SECTION SOCIO */}
-                                                <div className="space-y-12">
-                                                    <div className="relative">
-                                                        <span className="text-8xl font-black text-white/5 absolute -top-8 -left-4">S</span>
-                                                        <h3 className="text-4xl font-black text-white italic uppercase tracking-tighter border-b-2 border-red-600 pb-4 relative z-10">Socio</h3>
-                                                    </div>
-                                                    <div className="space-y-6 text-[10px] text-zinc-500 font-sans font-black uppercase tracking-[0.2em] leading-loose">
-                                                        <a href="https://www.universalis.fr/encyclopedie/interactionnisme-symbolique/" target="_blank" rel="noopener" className="block hover:text-red-500 transition-colors">Interactionnisme - Universalis</a>
-                                                        <a href="https://www.quebec.ca/famille-et-soutien-aux-personnes/violences/exploitation-sexuelle" target="_blank" rel="noopener" className="block hover:text-red-500 transition-colors">Gouvernement Québec - Définitions</a>
-                                                        <a href="https://shs.cairn.info/sociologie-de-la-prostitution" target="_blank" rel="noopener" className="block hover:text-red-500 transition-colors">Cairn.info - Sociologie Prostitution</a>
-                                                        <a href="https://shs.cairn.info/revue-deviance-et-societe-2010" target="_blank" rel="noopener" className="block hover:text-red-500 transition-colors">Revue Déviance et Société</a>
-                                                        <a href="https://www.erudit.org/fr/revues/bhp/2006-v15-n1-bhp04290/1056086ar/" target="_blank" rel="noopener" className="block hover:text-red-500 transition-colors">Érudit - Bulletin d'histoire politique</a>
-                                                    </div>
-                                                </div>
-
-                                                {/* SECTION HISTOIRE */}
-                                                <div className="space-y-12">
-                                                    <div className="relative">
-                                                        <span className="text-8xl font-black text-white/5 absolute -top-8 -left-4">H</span>
-                                                        <h3 className="text-4xl font-black text-white italic uppercase tracking-tighter border-b-2 border-red-600 pb-4 relative z-10">Histoire</h3>
-                                                    </div>
-                                                    <div className="space-y-6 text-[10px] text-zinc-500 font-sans font-black uppercase tracking-[0.2em] leading-loose">
-                                                        <a href="https://thecanadianencyclopedia.ca/fr/article/prostitution" target="_blank" rel="noopener" className="block hover:text-red-500 transition-colors">L'Encyclopédie Canadienne</a>
-                                                        <a href="https://crides.fondationscelles.org/mod/resource/view.php?id=18" target="_blank" rel="noopener" className="block hover:text-red-500 transition-colors">CRIDES - Archives Fondation Scelles</a>
-                                                        <a href="https://www.worldhistory.org/trans/fr/1-19387/hetaire/" target="_blank" rel="noopener" className="block hover:text-red-500 transition-colors">World History - L'Hétaïre</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            {/* BIBLIOGRAPHIE LIVRES */}
-                                            <div className="pt-24 border-t border-white/5 grid md:grid-cols-2 gap-16 pb-24">
-                                                <div className="space-y-12">
-                                                    <h3 className="text-xs font-black text-red-600 uppercase tracking-[0.5em]">Bibliographie Papier</h3>
-                                                    <ul className="space-y-8 text-xl font-light italic text-zinc-400">
-                                                        <li className="p-8 bg-white/5 rounded-2xl border border-white/10 group hover:border-red-600 transition-colors">
-                                                            <span className="text-white font-black not-italic block mb-2 uppercase text-sm tracking-widest">Danielle Lacasse</span>
-                                                            “La prostitution féminine à Montréal 1945-1970”, Édition Boréal
-                                                        </li>
-                                                        <li className="p-8 bg-white/5 rounded-2xl border border-white/10 group hover:border-red-600 transition-colors">
-                                                            <span className="text-white font-black not-italic block mb-2 uppercase text-sm tracking-widest">Yolande Cohen</span>
-                                                            “Prostitution et traite des femmes”, Édition Delbusso
-                                                        </li>
-                                                        <li className="p-8 bg-white/5 rounded-2xl border border-white/10 group hover:border-red-600 transition-colors">
-                                                            <span className="text-white font-black not-italic block mb-2 uppercase text-sm tracking-widest">C. Deschamps & A. Souyris</span>
-                                                            “Femme publiques Les féminismes à l’épreuve”, Éditions Amsterdam
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div className="space-y-12">
-                                                    <h3 className="text-xs font-black text-red-600 uppercase tracking-[0.5em]">Ouvrages Fondateurs</h3>
-                                                    <ul className="space-y-8 text-xl font-light italic text-zinc-500">
-                                                        <li>Juan-David Nasio, <span className="text-zinc-300">"L'ouvrage de la névrose" (2005)</span></li>
-                                                        <li>Sigmund Freud, <span className="text-zinc-300">"Trois essais sur la théorie sexuelle" (2011)</span></li>
-                                                        <li>Perron & Perron-Borelli, <span className="text-zinc-300">"Concept de l'Oedipe" (2001)</span></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </JournalSheet>
-                        )}
-
                         {/* Other chapters placeholder fix */}
-                        {!['hypothese', 'histoire', 'sociaux', 'psycho', 'glossaire', 'ressources', 'references'].includes(activeChapter || '') && (
+                        {!['hypothese', 'histoire', 'sociaux', 'psycho', 'glossaire', 'ressources'].includes(activeChapter || '') && (
                             <JournalSheet title="À Suivre" subtitle="Édition en cours">
                                 <div className="py-64 text-center space-y-8">
                                     <h2 className="text-7xl font-serif font-black italic text-zinc-900 uppercase">Chapitre Suivant.</h2>

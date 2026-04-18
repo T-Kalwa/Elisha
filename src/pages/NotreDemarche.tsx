@@ -40,13 +40,13 @@ const NotreDemarche = () => {
                 
                 <div className="columns-1 md:columns-2 gap-12 text-zinc-400 text-lg leading-relaxed font-serif">
                   <p className="drop-cap mb-8">
-                    Ce projet académique explore comment la <span className="text-white font-medium">stigmatisation sociale</span> influence les conditions de vie de ceux qui pratiquent la prostitution de nos jours. Pour ce faire, nous adoptons un regard sociologique, psychologique et historique.
+                    Ce projet académique explore comment la stigmatisation social influence les conditions de vie sûr ceux qui pratique la prostitution de nos jours. Pour ce faire nous allons adopter un regard sociologique, psychologique et historique.
                   </p>
                   <p className="mb-8">
-                    Notre but principal est de mieux comprendre les <span className="text-white italic">réalités vécues</span> par les personnes concernées ainsi que les perceptions et les jugements portés afin de pouvoir instruire en retour. Nous visons à mettre en lumière les retombées de cette <span className="text-secondary">stigmatisation</span> sur leur quotidien.
+                    L’aspect sociologique sera centré Notre but principale est de mieux comprendre les réalités vécues par les personnes concernées ainsi que les perceptions et les jugements portés afin de mieux pour instruire aussi en retour. Nous visons a mettre en lumière les retombées de cette stigmatisations sûr leur quotidiens.
                   </p>
                   <p className="mb-8">
-                    Notre recherche est présentée dans un format informatique afin de rendre l’information simple et accessible. Nous utilisons les progrès technologiques pour vulgariser l’information et instruire les étudiants ainsi que le personnel du milieu de l’éducation.
+                    Notre recherche est dans un format informatique plus précisement sûr un site internet afin de pouvoir rendre l’information plus simple et accessible au grand public. Nous sommes persuadés que nous pouvons utilisé les progrès technologiques qui nous environnent pour vulgariser l’information afin d’instruire les étudiants et le personnel dans le milieu de l’éducation.
                   </p>
                 </div>
               </div>
@@ -81,8 +81,8 @@ const NotreDemarche = () => {
                <span className="text-secondary font-black tracking-[0.5em] text-[10px] uppercase mb-4 block">
                  Question de Recherche
                </span>
-               <h3 className="text-5xl md:text-8xl font-black italic tracking-tighter leading-[0.9] text-white">
-                 « En quoi la stigmatisation sociale influence-t-elle les <span className="underline underline-offset-8 decoration-white/20">conditions de vie</span> de ceux qui pratiquent la prostitution ? »
+               <h3 className="text-3xl md:text-5xl font-black italic tracking-tighter leading-tight text-white">
+                 « Dans ce projet, nous cherchons à expliquer en quoi la stigmatisation social influence les <span className="underline underline-offset-8 decoration-white/20">conditions de vie</span> sur ceux qui pratique la prostitution de nos jours. »
                </h3>
             </div>
           </section>
@@ -113,7 +113,7 @@ const NotreDemarche = () => {
                        À notre avis, la prostitution est considérée dans notre société comme un thème controversé qui remet en cause certaines valeurs partagées. Elle suscite des discussions cruciales, notamment pour déterminer si elle doit être perçue comme un travail ou comme une forme d'exploitation. 
                      </p>
                      <p className="text-zinc-400 text-lg leading-relaxed m-0">
-                       Dans de nombreux contextes, la prostitution est liée à des éléments négatifs comme l'exploitation et des questions relatives au consentement, ce qui participe à une image sociale généralement péjorative. Par conséquent, nous estimons que cette stigmatisation impacte les conditions d'existence des individus touchés.
+                       Dans de nombreux contextes, la prostitution est liée à des éléments négatifs comme l'exploitation et des questions relatives au consentement, ce qui participe à une image sociale généralement péjorative. Par conséquent, nous estimons que cette stigmatisation impacte les conditions d'existence des individus touchés, en particulier en accentuant les jugements sociaux et en restreignant leur sentiment de légitimité, même pour celles qui ont opté pour ce métier.
                      </p>
                    </div>
 
@@ -125,7 +125,7 @@ const NotreDemarche = () => {
                      </div>
 
                      <p className="text-zinc-400 text-lg leading-relaxed m-0">
-                       Nous n'adoptons pas une position pro ou anti-prostitution, cependant nous sommes d'avis que malgré quelques efforts de régulation légale, elle reste un phénomène largement marginalisé. Cette situation favorise la persistance de conditions de vulnérabilité, aussi bien d'un point de vue social que sécuritaire.
+                       Nous n'adoptons pas une position pro ou anti-prostitution, cependant nous sommes d'avis que malgré quelques efforts de régulation légale, elle reste un phénomène largement marginalisé. Cette situation favorise la persistance de conditions de vulnérabilité, aussi bien d'un point de vue social que sécuritaire, pour les individus concernés.
                      </p>
                    </div>
                  </div>

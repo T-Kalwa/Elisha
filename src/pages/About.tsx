@@ -14,7 +14,7 @@ const About = () => {
       lastName: "Kasongo",
       firstName: "Elisha",
       role: "CHERCHEUSE DU PROJET",
-      bio: <>Spécialisée dans l'étude des structures de pouvoir et de la <GlossaryLink termId="stigmatisation" label="stigmatisation" />. Mon travail se concentre sur l'intersectionnalité entre le droit et les réalités sociales occultées au Québec.</>,
+      bio: <>Mon nom est Elisha Kasongo, je suis une étudiante finissante au Collège Lasalle dans le programme de sciences humaines. Passionnée par la criminalité, le droit et les sujets tabous de la société, j’ai trouvé l’opportunité d’explorer en profondeur ces intérêts à travers ce projet. J’ai toujours été attirée par les réalités de notre société qui sont moins abordées comme les crimes organisés, les théories du complot derrière les grosses institutions de notre société et notamment la prostitution. Ce site web est une occasion de mieux comprendre la <GlossaryLink termId="stigmatisation" label="stigmatisation" /> qui entoure la prostitution au Québec à travers le regard d’étudiantes en sciences humaines.</>,
       quote: "Comprendre le silence, c'est commencer à déconstruire l'étiquette.",
       interests: ["Criminalité", "SOCIOLOGIE DU DROIT", "TABOUS"],
       image: elishaImg,
@@ -25,9 +25,9 @@ const About = () => {
       lastName: "Natareno",
       firstName: "Rihanna",
       role: "ANALYSTE SOCIOCULTURELLE",
-      bio: "Dédiée à l'analyse de l'englobement social et juridique des populations marginalisées. Mon approche vise à humaniser les données pour briser le cycle du jugement.",
+      bio: <>Mon nom est Rihanna Natareno, je suis une étudiante finissante au Collège Lasalle dans le programme de sciences humaines. Je m’intéresse profondément sur les enjeux sociaux et juridiques qui entournent notre société. Dans le cadre de ce projet, je m’intéresse à explorer sur la prostitution, car il s’agit d’un sujet qui est notamment sensible et rarement dialoguer. Mon objectif face à ce projet n’est pas de porter un jugement, mais de mieux comprendre l’englobement des personnes en situation de prostitution, et de sensibiliser le public sur la réalité derrière ce sujet qui reste tabou. Ce projet représente pour moi une opportunité de développer un regard plus objectif, mais aussi plus empathique, sur une réalité sociale complexe.</>,
       quote: "La réalité humaine ne tient pas dans une définition préconçue.",
-      interests: ["ENJEUX SOCIAUX", "SENSIVILISATION", "HUMANITÉS"],
+      interests: ["ENJEUX SOCIAUX", "SENSIBILISATION", "HUMANITÉS"],
       image: rihannaImg,
       color: "#9d5cfc"
     }
