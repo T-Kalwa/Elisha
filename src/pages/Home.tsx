@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Shield, Target, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import stigmaHeroImg from '../assets/stigma-hero.png';
+import GlossaryLink from '../components/GlossaryLink';
 
 const Home = () => {
   const containerVariants = {
@@ -73,7 +74,7 @@ const Home = () => {
           </h1>
 
           <h2 className="text-2xl md:text-4xl text-zinc-300 max-w-4xl mx-auto font-light leading-snug">
-            Une exploration de la stigmatisation entourant la <span className="text-red-500 font-bold underline decoration-red-500/30 underline-offset-8 italic">prostitution au Québec</span> à travers le prisme sociologique.
+            Une exploration de la <GlossaryLink termId="stigmatisation" label="stigmatisation" /> entourant la <span className="text-red-500 font-bold underline decoration-red-500/30 underline-offset-8 italic">prostitution au Québec</span> à travers le prisme sociologique.
           </h2>
 
           <div className="pt-12 flex flex-wrap justify-center gap-8">

@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion';
-import { Microscope, Compass, Sparkles, BookOpen, Share2, ShieldAlert, ArrowRight } from 'lucide-react';
+import { Microscope, Sparkles, ShieldAlert, ArrowRight } from 'lucide-react';
 
 const NotreDemarche = () => {
   return (

@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Tag, Book, Heart, Users, History, Megaphone, Info, FileText } from 'lucide-react';
+import { Menu, X, Tag, Book, Users, Info, FileText } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const Navbar = () => {

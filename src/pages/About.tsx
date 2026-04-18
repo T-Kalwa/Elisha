@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { Shield, ArrowDown, Quote } from 'lucide-react';
+import GlossaryLink from '../components/GlossaryLink';
 import elishaImg from '../assets/elisha.jpeg';
 import rihannaImg from '../assets/RIhanna.jpeg';
 
@@ -13,7 +14,7 @@ const About = () => {
       lastName: "Kasongo",
       firstName: "Elisha",
       role: "CHERCHEUSE DU PROJET",
-      bio: "Spécialisée dans l'étude des structures de pouvoir et de la stigmatisation. Mon travail se concentre sur l'intersectionnalité entre le droit et les réalités sociales occultées au Québec.",
+      bio: <>Spécialisée dans l'étude des structures de pouvoir et de la <GlossaryLink termId="stigmatisation" label="stigmatisation" />. Mon travail se concentre sur l'intersectionnalité entre le droit et les réalités sociales occultées au Québec.</>,
       quote: "Comprendre le silence, c'est commencer à déconstruire l'étiquette.",
       interests: ["Criminalité", "SOCIOLOGIE DU DROIT", "TABOUS"],
       image: elishaImg,
@@ -221,13 +222,6 @@ const About = () => {
           <p className="text-zinc-500 text-xl font-light mb-16 max-w-2xl mx-auto italic">
             "Le projet Étiquette & Réalité ne se contente pas d'exposer des faits, il cherche à transformer la perception sociale de la marginalité."
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-12 py-6 rounded-full bg-white text-black font-black tracking-widest uppercase text-xs hover:bg-red-600 hover:text-white transition-all shadow-2xl"
-          >
-            Soutenir la Recherche
-          </motion.button>
         </motion.div>
       </section>
     </div>
