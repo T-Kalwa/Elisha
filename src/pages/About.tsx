@@ -75,7 +75,7 @@ const About = () => {
       </section>
 
       {/* Deep Dive Profiles */}
-      <section className="relative px-6 pb-64 space-y-[40vh]">
+      <section className="relative px-6 pb-64 space-y-48">
         {authors.map((author, idx) => {
           const sectionRef = useRef(null);
           const { scrollYProgress } = useScroll({
@@ -96,7 +96,7 @@ const About = () => {
               key={idx}
               id={author.firstName.toLowerCase()}
               ref={sectionRef}
-              className={`max-w-7xl mx-auto flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-32 items-center relative`}
+              className={`max-w-4xl xl:max-w-5xl mx-auto flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 items-center relative`}
             >
               {/* Floating Background Glow */}
               <motion.div
@@ -109,7 +109,7 @@ const About = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                className="w-full lg:w-1/2 group relative"
+                className="w-full lg:w-5/12 max-w-[380px] group relative"
               >
                 {/* Massive Name Background - Parallax Editorial style */}
                 <motion.div
@@ -129,7 +129,7 @@ const About = () => {
 
                 <motion.div
                   style={{ scale: useTransform(scrollYProgress, [0, 1], [0.95, 1.1]) }}
-                  className="relative aspect-[3/4] overflow-hidden rounded-[2.5rem] border border-white/5 bg-zinc-900 group-hover:border-red-500/30 transition-all duration-700 shadow-2xl"
+                  className="relative aspect-square overflow-hidden rounded-[2rem] border border-white/5 bg-zinc-900 group-hover:border-red-500/30 transition-all duration-700 shadow-2xl"
                 >
                   {/* Interactive Grain Overlay */}
                   <div className="absolute inset-0 noise-overlay opacity-20 pointer-events-none z-10" />
@@ -168,14 +168,14 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1, delay: 0.3 }}
-                className="w-full lg:w-1/2 space-y-12"
+                className="w-full lg:w-7/12 space-y-8"
               >
                 <div className="space-y-6">
                   <div className="flex items-center gap-6">
                     <span className="text-red-500 font-black text-xs tracking-[0.4em] uppercase">DOSSIER PERSO</span>
                     <div className="h-px flex-1 bg-zinc-800" />
                   </div>
-                  <h2 className="text-6xl md:text-8xl font-bold tracking-tighter leading-none group">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-none group">
                     {author.name}
                     <span className="inline-block w-4 h-4 bg-red-600 rounded-full ml-4 animate-pulse" />
                   </h2>
@@ -183,12 +183,12 @@ const About = () => {
 
                 <div className="relative">
                   <Quote className="absolute -top-8 -left-8 text-white/5 w-20 h-20 -z-10" />
-                  <p className="text-2xl md:text-3xl font-light italic text-zinc-300 leading-relaxed border-l-2 border-red-600/30 pl-10">
+                  <p className="text-base md:text-lg font-light italic text-zinc-300 leading-relaxed border-l-2 border-red-600/30 pl-6">
                     {author.quote}
                   </p>
                 </div>
 
-                <p className="text-zinc-500 text-xl font-light leading-relaxed max-w-xl">
+                <p className="text-zinc-500 text-sm md:text-base font-light leading-relaxed max-w-2xl">
                   {author.bio}
                 </p>
 
